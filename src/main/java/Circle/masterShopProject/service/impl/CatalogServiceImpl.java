@@ -1,10 +1,8 @@
 package Circle.masterShopProject.service.impl;
-
 import Circle.masterShopProject.dto.CatalogDto;
 import Circle.masterShopProject.dto.ResponseDto;
 import Circle.masterShopProject.service.CatalogService;
 import org.springframework.data.domain.Page;
-
 import java.util.List;
 
 public class CatalogServiceImpl implements CatalogService {
