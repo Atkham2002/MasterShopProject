@@ -17,8 +17,8 @@ public class CatalogController {
     private final CatalogService catalogService;
 
     @GetMapping
-    public ResponseDto<List<Page<CatalogDto>>> getAllCatalog(){
-        return catalogService.getAllCatalog();
+    public ResponseDto<Page<CatalogDto>> getAllCatalog(@RequestParam Integer page,@RequestParam Integer size){
+        return catalogService.getAllCatalog(page, size);
     }
 
     @GetMapping("/{id}")

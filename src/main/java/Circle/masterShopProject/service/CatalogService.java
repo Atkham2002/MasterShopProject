@@ -7,12 +7,11 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 public interface CatalogService {
 
     ResponseDto<String> addCatalog(CatalogDto catalogDto);
 
-    ResponseDto<List<Page<CatalogDto>>> getAllCatalog();
+    ResponseDto<Page<CatalogDto>> getAllCatalog(Integer page,Integer size);
 
     ResponseDto<CatalogDto> getById(Integer id);
 

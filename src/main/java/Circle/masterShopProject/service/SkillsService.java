@@ -7,12 +7,11 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 public interface SkillsService {
 
     ResponseDto<String> addCSkills(SkillsDto skillsDto);
 
-    ResponseDto<List<Page<SkillsDto>>> getAllSkills();
+    ResponseDto<Page<SkillsDto>> getAllSkills(Integer page, Integer size);
 
     ResponseDto<SkillsDto> getByIdSkills(Integer id);
 

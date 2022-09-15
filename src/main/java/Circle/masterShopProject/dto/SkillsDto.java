@@ -15,6 +15,6 @@ public class SkillsDto {
 
     private String name;
 
-    private Integer catalogId;
+    private CatalogDto catalogId;
 
 }

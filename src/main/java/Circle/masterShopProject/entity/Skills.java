@@ -22,7 +22,7 @@ public class Skills {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "catalog_id",referencedColumnName = "id")
+//    @JoinColumn(name = "catalog_id",referencedColumnName = "id")
     private Catalog catalogId;
 
 }

@@ -3,6 +3,7 @@ package Circle.masterShopProject.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -19,6 +20,7 @@ public class Catalog {
 
     private String name;
 
-
+    @OneToMany(mappedBy = "catalogId",fetch = FetchType.LAZY)
+    private List<Skills> skills;
 
 }

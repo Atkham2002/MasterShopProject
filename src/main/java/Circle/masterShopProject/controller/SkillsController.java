@@ -18,8 +18,8 @@ public class SkillsController {
     private final SkillsService skillsService;
 
     @GetMapping
-    public ResponseDto<List<Page<SkillsDto>>> getAllSkills(){
-        return skillsService.getAllSkills();
+    public ResponseDto<Page<SkillsDto>> getAllSkills(@RequestParam Integer page,@RequestParam Integer size){
+        return skillsService.getAllSkills(page,size);
     }
 
     @GetMapping("/{id}")
