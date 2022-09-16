@@ -53,16 +53,16 @@ public class DistrictServiceImpl implements DistrictService {
         Optional<District> optional = repository.findById(districtDto.getId());
         if(optional.isEmpty()){
             return ResponseDto.builder().code(404).message("not Found District").success(false).build();
-
         }
-        District district = optional.get();
-        DistrictDto dto = DistrictDto.builder()
-                .id(districtDto.getId() !=null? districtDto.getId(): district.getId())
-                .name(districtDto.getName() !=null ? districtDto.getName():district.getName())
-                //.regionId(districtDto.getRegionId() !=null ? districtDto.getRegionId():district.getRegionId())
-                .build();
-
-        return ResponseDto.builder().success(true).message("Ok").data(dto).code(200).build();
+        repository.save(districtMapper.toEntity(districtDto));
+        return ResponseDto.builder().success(true).message("Ok").data(districtDto).code(200).build();
+//        District district = optional.get();
+//        DistrictDto dto = DistrictDto.builder()
+//                .id(districtDto.getId() !=null? districtDto.getId(): district.getId())
+//                .name(districtDto.getName() !=null ? districtDto.getName():district.getName())
+//                //.regionId(districtDto.getRegionId() !=null ? districtDto.getRegionId():district.getRegionId())
+//                .build();
+//
     }
 
     @Override
