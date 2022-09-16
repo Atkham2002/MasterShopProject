@@ -5,9 +5,9 @@ import Circle.masterShopProject.entity.Region;
 
 import java.util.List;
 
-public class RegionMapperSkills {
+public class RegionMapper {
     public static RegionDto toRegionDto(Region region){
-        List<DistrictDto> list = region.getDistricts().stream().map(DistrictMapperSkills::toDistrictDtoNo).toList();
+        List<DistrictDto> list = region.getDistricts().stream().map(DistrictMapper::toDistrictDtoNo).toList();
         return RegionDto.builder()
                 .id(region.getId())
                 .name(region.getName())
