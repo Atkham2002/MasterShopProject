@@ -1,14 +1,15 @@
 package Circle.masterShopProject.entity;
 
+import Circle.masterShopProject.dto.DistrictDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -21,4 +22,8 @@ public class Region {
     @SequenceGenerator(name = "region_id",sequenceName = "region_id_seq",allocationSize = 1)
     private Integer id;
     private String name;
+
+    @OneToMany(mappedBy = "regionId",fetch = FetchType.LAZY)
+    @Fetch(FetchMode.SUBSELECT)
+    private List<District> districts;
 }

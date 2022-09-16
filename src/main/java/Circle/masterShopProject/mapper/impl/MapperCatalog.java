@@ -10,7 +10,6 @@ public class MapperCatalog {
 
     public static CatalogDto ToCatalogDto(Catalog catalog){
         List<SkillsDto> list = catalog.getSkills().stream().map(MapperSkills::NoCatalogId).toList();
-
         return CatalogDto.builder()
                 .id(catalog.getId())
                 .name(catalog.getName())

@@ -12,5 +12,5 @@ import lombok.NoArgsConstructor;
 public class DistrictDto {
     private Integer id;
     private String name;
-    private Integer region_id;
+    private RegionDto regionId;
 }

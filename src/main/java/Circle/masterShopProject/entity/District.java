@@ -19,7 +19,8 @@ public class District {
     @SequenceGenerator(name = "district_id",sequenceName = "district_id_seq",allocationSize = 1)
     private Integer id;
     private String name;
-    private Integer region_id;
+    @ManyToOne()
+    private Region regionId;
 
 
 }
