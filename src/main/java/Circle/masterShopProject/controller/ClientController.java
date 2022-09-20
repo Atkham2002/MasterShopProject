@@ -32,7 +32,7 @@ public class ClientController {
         return clientService.deleteClientById(id);
     }
     @PatchMapping
-    public ResponseDto updateClent(@RequestBody ClientDto clientDto){
+    public ResponseDto updateClient(@RequestBody ClientDto clientDto){
         return clientService.updateClient(clientDto);
     }
 }

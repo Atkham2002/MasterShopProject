@@ -15,7 +15,7 @@ public class MasterSkillsDto {
 
     private SkillsDto skills;
 
-    private Object client;
+    private ClientDto client;
 
     private Double cost;
 
