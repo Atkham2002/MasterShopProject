@@ -16,7 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 public class Vlog {
     @Id
-    @GeneratedValue()
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(name = "title", unique = true, length = 512)
