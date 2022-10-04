@@ -4,8 +4,9 @@ import Circle.masterShopProject.dto.RegionDto;
 import Circle.masterShopProject.dto.ResponseDto;
 import Circle.masterShopProject.service.RegionService;
 import org.springframework.data.domain.Page;
+import org.springframework.stereotype.Service;
 import org.springframework.util.MultiValueMap;
-
+@Service
 public class RegionServiceImpl implements RegionService {
     @Override
     public ResponseDto<String> addRegion(RegionDto regionDto) {

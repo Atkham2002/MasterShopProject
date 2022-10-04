@@ -24,7 +24,9 @@ public class MasterSkills {
     @JoinColumn(name = "skills", referencedColumnName = "id")
     private Skills skills;
 
-    private Object client;
+    @ManyToOne
+    @JoinColumn(name = "client",referencedColumnName = "id")
+    private Client client;
 
     private Double cost;
 
