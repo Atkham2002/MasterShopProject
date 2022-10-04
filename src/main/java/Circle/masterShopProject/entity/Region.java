@@ -1,6 +1,5 @@
 package Circle.masterShopProject.entity;
 
-import Circle.masterShopProject.dto.DistrictDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
