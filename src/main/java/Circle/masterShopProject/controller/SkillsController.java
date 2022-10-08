@@ -29,7 +29,7 @@ public class SkillsController {
     }
 
     @PostMapping
-    public ResponseDto<String> addSkills(SkillsDto skillsDto){
+    public ResponseDto<SkillsDto> addSkills(@RequestBody SkillsDto skillsDto){
         return skillsService.addSkills(skillsDto);
     }
 

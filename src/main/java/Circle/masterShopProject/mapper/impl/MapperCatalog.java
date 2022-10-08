@@ -18,10 +18,10 @@ public class MapperCatalog {
     }
 
 
-    public static CatalogDto NoSkills(Catalog catalogDto){
+    public static CatalogDto NoSkills(Catalog catalog){
         return CatalogDto.builder()
-                .id(catalogDto.getId())
-                .name(catalogDto.getName())
+                .id(catalog.getId())
+                .name(catalog.getName())
                 .build();
     }
 

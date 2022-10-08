@@ -27,15 +27,19 @@ public class SkillsServiceImpl implements SkillsService {
     private final SkillsHelper helper;
 
     @Override
-    public ResponseDto<String> addSkills(SkillsDto skillsDto) {
-        repository.save(skillsMapper.toSkills(skillsDto));
+    public ResponseDto<SkillsDto> addSkills(SkillsDto skillsDto) {
+        Skills skills = repository.save(skillsMapper.toSkills(skillsDto));
 
-        return ResponseDto.<String>builder().code(0).success(true).message("successfully saved").build();
+        SkillsDto dto = skillsMapper.toSkillsDto(skills);
+
+        return ResponseDto.<SkillsDto>builder().code(0).success(true).message("successfully saved").data(dto).build();
     }
 
     @Override
     public ResponseDto<Page<SkillsDto>> getAllSkills(Integer page, Integer size) {
         PageRequest request = PageRequest.of(page,size);
+
+//        System.out.println(repository.findAll());
 
         Page<SkillsDto> skillsDtos = repository.findAll(request).map(MapperSkills::toSkillsDto);
 

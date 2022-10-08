@@ -10,4 +10,6 @@ public interface MasterSkillsService {
     ResponseDto<MasterSkillsDto> doPost(MasterSkillsDto masterSkillsDto);
 
     ResponseDto<Page<MasterSkillsDto>> getByParams(MultiValueMap<String, String> map);
+
+    ResponseDto<MasterSkillsDto> getDtoById(Integer skillId, Integer clientId);
 }

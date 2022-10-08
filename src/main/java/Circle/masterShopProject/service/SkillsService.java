@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface SkillsService {
 
-    ResponseDto<String> addSkills(SkillsDto skillsDto);
+    ResponseDto<SkillsDto> addSkills(SkillsDto skillsDto);
 
 
     ResponseDto<Page<SkillsDto>> getAllSkills(Integer page, Integer size);
