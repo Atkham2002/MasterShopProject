@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import org.apache.catalina.LifecycleState;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -23,7 +24,13 @@ public class Order {
     @ManyToMany
     private List<Client> client;
 
-//    private MasterSkills masterSkills;
+    @ManyToMany
+    private List<MasterSkills> masterSkills;
+
+    private Date orderedTime;
+
+    @Column(name = "created_at")
+    private Date createdAt;
 
     private boolean status;
 }

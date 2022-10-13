@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -30,4 +31,6 @@ public class Client {
     @JoinColumn(name = "kimu", referencedColumnName = "id")
     private Kimu kimu;
 
+    @OneToMany
+    private List<PhotoUsta> photos;
 }
