@@ -11,7 +11,7 @@ import java.util.Date;
 import java.util.List;
 
 @Data
-@Entity(name = "order")
+@Entity(name = "orders")
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor

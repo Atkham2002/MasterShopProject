@@ -15,7 +15,7 @@ public class VlogController {
     public ResponseDto addVlog(@RequestBody VlogDto vlogDto){
        return vlogService.addVlog(vlogDto);
     }
-    @GetMapping("{/id}")
+    @GetMapping("/{id}")
     public ResponseDto getById(@PathVariable Integer id){
         return vlogService.getById(id);
     }
